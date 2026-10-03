@@ -1,0 +1,89 @@
+wnen we want to recieve tne any signup rorm aata or login rorm aata
+inside the view, we will use following ways:
+request.form['name of the form field'](it will give the
+error if the given field name is not found)
+or
+request. form.get('name of the form field') <== error free (even field
+not found or given field name is not found, it will simply store
+None without givin error)
+========================================================================
+Session:
+=======
+when we are working with any application, all pages we can not open directly
+any page can opened only when the use is authenticated or login , then we have
+to give the access
+
+
+in order to check where the user is really login or not, to check this
+we are using a concept called "Session"
+
+in order to work with "flask sessions", we will create a secreat key
+to create this we will use flask object name
+app. secreat_key="key"
+=======================================================
+
+security:
+
+when we are storing the sensitive information in the database, we can not store
+the data directly inside the database, we can able to store the data in the form
+of the hashing (encryted form)
+Example:
+        password keys, any password data
+in order to perform hashing in flask, we wil use 
+the following
+1)using flask default module called "Werkzeug"
+===========================================
+in this we will have the folowing functions:
+--------------------------------------------
+    generate_password_hash()
+using this we can able to perform the hashing
+    check_password_hash()
+using this given data and hashing data both same or not
+whatever data we converted into hashed form using Werkzeug. security, we can not
+convert back into normal data, we can check given data and hashed data both are
+same or not using "check_password_hash()"
+
+drawback is we cannot convert into back after converting the encrypt
+
+
+
+2)using bcrypt module
+-------------------
+this module will provide the following functions:
+
+hashpw()
+
+using this we can perfrom the hasing for the given data
+checkpw():
+
+using this we can validate the given data and hased data or same or not
+gensalt()
+
+this is used by hashpw(), for waht way need to perform the hashing
+
+in this also hashed data can not able to convert back into normal data
+
+this is how we should perform the bcrypt
+----------------------------------------
+Data === > encode() === > hashpw()
+
+
+
+2)cryptography module:
+
+using this module, we can able to perform the both encryption and
+decryption
+in this module, we will have a class called "Fernet" using this we can perform
+both encryption and decryption
+step-1:
+        create the key
+step-2:
+        create the obejct to the Fernet class using key
+
+step-3:
+        Encrypt or Decrypt
+
+
+        
+
+

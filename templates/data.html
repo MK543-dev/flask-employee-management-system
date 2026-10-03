@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Data</title>
+    <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <center>
+
+        <nav>
+            <a href="{{url_for('home')}}">home</a>|
+            <a href="{{url_for('about')}}">about</a>|
+            <a href="{{url_for('signup')}}">signup</a>|
+            <a href="{{url_for('dashboard')}}">dashboard</a>|
+            <a href="{{url_for('logout')}}">Logout</a>
+
+        </nav>
+                <h1>
+
+                    Employee Data page
+                </h1>
+
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>firstname</th>
+                        <th>lastname</th>
+                        <th>email</th>
+                        <th>password</th>
+                        <th>mobileno</th>
+                        <th>location</th>
+                        <th>zipcode</th>
+                        <th>Action</th>
+                        <th>Action</th>
+                    </tr>
+                    {% for data in result %}
+                    <tr>
+                        <td>{{data[0]}}</td>
+                        <td>{{data[1]}}</td>
+                        <td>{{data[2]}}</td>
+                        <td>{{data[3]}}</td>
+                        <td>{{data[4]}}</td>
+                        <td>{{data[5]}}</td>
+                        <td>{{data[6]}}</td>
+                        <td>{{data[7]}}</td>
+                        <td> <a href = "{{url_for('update', id=data[0])}}"> update</a></td>
+                        <td> <a href = "{{url_for('delete', id=data[0])}}"
+                            onclick = "return confirm('Do you want to delete!')"> delete</a></td>  
+                    </tr>
+                     {% endfor %}
+
+                </table>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Singup</title>
+    <link href="{{url_for('static', filename='css/signup.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <center>
+
+        
+
+        <nav>
+            <a href="{{url_for('home')}}">home</a>
+            <a href="{{url_for('about')}}">about</a>
+            <a href="{{url_for('data')}}">data</a>
+            <a href="{{url_for('login')}}">login</a>
+        <nav>
+            
+            
+
+                <h1>
+                    This is Singup page!
+                </h1>
+                <form method="post" , action="{{url_for('signup')}}">
+                    <input type="text" placeholder="firstname" name="firstname" id="firstname" required /> <br>
+                    <input type="text" placeholder="lastname" name="lastname" id="lastname" required /> <br>
+                    <input type="email" placeholder="email" name="email" id="email" required /> <br>
+                    <input type="password" placeholder="password" name="password" id="password" required /> <br>
+                    <input type="number" placeholder="mobileno" name="mobileno" id="mobileno" required /> <br>
+                    <input type="text" placeholder="location" name="location" id="location" required /> <br>
+                    <input type="number" placeholder="zipcode" name="zipcode" id="zipcode" required /> <br>
+                    <input type="submit" value="submit">
+                    <input type="reset" value="clear">
+
+                </form>
+    </center>
+</body>
+
+</html>
+
+
+

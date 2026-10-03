@@ -1,0 +1,130 @@
+body {
+    background-color: #0f172a;
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+    padding: 40px;
+
+    color: white;
+}
+
+
+/* Navigation */
+
+nav {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    margin: 0 8px;
+
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* Heading */
+
+h1 {
+    color: white;
+
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* Login Form */
+
+form {
+    text-align: center;
+}
+
+
+/* Email and Password */
+
+input[type="email"],
+input[type="password"] {
+    width: 450px;
+
+    height: 40px;
+
+    margin: 8px 0;
+
+    padding: 0 12px;
+
+    border: 1px solid #64748b;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+}
+
+
+/* Input Focus Effect */
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+
+    border-color: #38bdf8;
+
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+
+/* Submit and Clear buttons */
+
+input[type="submit"],
+input[type="reset"] {
+    width: 150px;
+    height: 52px;
+
+    margin: 10px 5px;
+    padding: 0;
+
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 20px;
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+/* Submit Button */
+
+input[type="submit"] {
+    background-color: #2563eb;
+}
+
+
+/* Clear Button */
+
+input[type="reset"] {
+    background-color: #475569;
+}
+
+
+/* Hover */
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    opacity: 0.85;
+}

@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(1, 1, 48);
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+th, td
+{
+    border: 2px solid white;
+    color: whitesmoke; font-size: 30px;
+}

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Singup</title>
+    <link href="{{url_for('static', filename='css/signup.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <center>
+
+        
+
+        <nav>
+            <a href="{{url_for('home')}}">home</a>
+            <a href="{{url_for('about')}}">about</a>
+            <a href="{{url_for('data')}}">data</a>
+            <a href="{{url_for('login')}}">login</a>
+        <nav>
+            
+            
+
+                <h1>
+                    Update employee profile
+                </h1>
+                <form method="post" , action="{{url_for('update', id = result[0])}}">
+                    <input type="text"     value="{{result[1]}}"  name="firstname" id="firstname" required /> <br>
+                    <input type="text"     value="{{result[2]}}"  name="lastname" id="lastname" required /> <br>
+                    <input type="email"    value="{{result[3]}}"  name="email" id="email" required />        <br>
+                    <input type="password" value="{{result[4]}}"  name="password" id="password" required />  <br>
+                    <input type="number"   value="{{result[5]}}"  name="mobileno" id="mobileno" required />  <br>
+                    <input type="text"     value="{{result[6]}}"  name="location" id="location" required />  <br>
+                    <input type="number"   value="{{result[7]}}"  name="zipcode" id="zipcode" required />     <br>
+                    <input type="submit"   value="submit">
+                    <input type="reset"    value="clear">
+
+                </form>
+    </center>
+</body>
+
+</html>
+
+
+
